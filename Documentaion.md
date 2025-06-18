@@ -4,7 +4,7 @@
 
 ## Table of Contents
 
-1.  [Overview](#1\. Overview)
+1.  [Overview](#1-overview)
 2.  [Features](https://www.google.com/search?q=%232-features)
 3.  [Installation](https://www.google.com/search?q=%233-installation)
 4.  [Quick Start Guide](https://www.google.com/search?q=%234-quick-start-guide)
