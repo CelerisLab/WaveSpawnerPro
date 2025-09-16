@@ -440,7 +440,7 @@ Please provide your Unity version, a detailed description of the issue, and step
 
 ## 11\. Version History
 
-**Version 1.0.1 (June 2025)**
+**Version 1.0.1 (September 2025)**
 *   **[Improved]** The pre-spawn visual feature now accepts any `GameObject` prefab, not just `SpriteRenderer`s. This allows for the use of 3D models, particle systems, or other custom visuals as spawn warnings.
 *   **[Changed]** Renamed public variables in the Inspector for better clarity and consistency:
     *   `spawnSpritePrefab` is now `preSpawnVisualPrefab`.
