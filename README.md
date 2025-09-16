@@ -178,13 +178,12 @@ Attach the `WaveManager.cs` script to an empty GameObject in your scene to confi
 
 #### Visual Feedback
 
-  * **`Spawn Sprite Prefab` (SpriteRenderer):**
-      * An optional `SpriteRenderer` prefab that will be instantiated at each enemy's spawn location just before the enemy appears. This provides a visual "warning" or "coming soon" indicator for the player.
-      * **Setup:** Create a prefab of a `GameObject` with a `SpriteRenderer` component (e.g., a circle, an "X", or a glowing effect). Drag this prefab into this slot. Leave empty if you don't want a visual cue.
-  * **`Time Between Spawn And Spawn Sprite` (float):**
-      * The duration (in seconds) that the `Spawn Sprite Prefab` is visible before the actual enemy `GameObject` appears at that location.
-      * Set to `0` for instant enemy spawning after the sprite.
-
+*   **`Pre Spawn Visual Prefab` (GameObject):**
+    *   An optional prefab to instantiate as a visual warning before an enemy spawns. This can be a particle system, a 2D sprite, a 3D animated model, or any other visual indicator you create.
+    *   **Setup:** Create a prefab of any `GameObject` you want to use as the warning visual. Drag that prefab into this slot. Leave this field empty if you do not want a pre-spawn visual.
+*   **`Pre Spawn Visual Duration` (float):**
+    *   The duration in seconds that the `Pre Spawn Visual Prefab` is visible on screen before the enemy spawns.
+    *   A value of `0` will cause the enemy to spawn immediately after the visual appears.
 #### Timing Settings
 
   * **`Time Between Spawns` (float):**
@@ -437,19 +436,24 @@ If you encounter any issues, have questions, or require further assistance, plea
 
 Please provide your Unity version, a detailed description of the issue, and steps to reproduce it, if possible.
 
------
+---
 
-## 11\. Version History
+### 11. Version History
+
+**Version 1.0.1 (June 2025)**
+*   **[Improved]** The pre-spawn visual feature now accepts any `GameObject` prefab, not just `SpriteRenderer`s. This allows for the use of 3D models, particle systems, or other custom visuals as spawn warnings.
+*   **[Changed]** Renamed public variables in the Inspector for better clarity and consistency:
+    *   `spawnSpritePrefab` is now `preSpawnVisualPrefab`.
+    *   `timeBetweenSpawnAndSpawnSprite` is now `preSpawnVisualDuration`.
+
+---
 
 **Version 1.0.0 (June 2025)**
-
-  * Initial Release of Wave Spawner Pro.
-  * Core wave spawning, burst configuration.
-  * Object pooling implementation.
-  * Event system for wave lifecycle.
-  * Optional spawn sprite visual feedback.
-  * Manual wave start functionality.
-  * Debug log toggle.
-  * **New:** Added Editor menu item (`CelerisLab/Create Wave Manager`) for quick setup.
-
------
+*   Initial Release of Wave Spawner Pro.
+*   Core wave spawning, burst configuration.
+*   Object pooling implementation.
+*   Event system for wave lifecycle.
+*   Optional spawn sprite visual feedback.
+*   Manual wave start functionality.
+*   Debug log toggle.
+*   Added Editor menu item (GameObject/CelerisLab/Create Wave Manager) for quick setup.
